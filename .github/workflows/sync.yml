@@ -29,11 +29,11 @@ jobs:
           git config --global user.email "me@michaelwinkler.org"
 
       - name: Push changes to fork when upstream is updated
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           git fetch origin
           git checkout main
-          git merge master
+          git merge main
           git push origin main
           
     
